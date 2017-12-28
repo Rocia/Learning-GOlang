@@ -13,3 +13,14 @@ fmt.Println("true && false = ",true && false)
 fmt.Println("true || false = ",true || false)
 fmt.Println("!true = ", !true)
 }
+
+/*
+GOlang tutorial
+2+2 =  4
+2*2 =  4
+12/5 =  2
+12.0/5.0 = 2.4
+true && false =  false
+true || false =  true
+!true =  false
+*/

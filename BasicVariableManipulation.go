@@ -25,3 +25,17 @@ h := 2
 fmt.Println(g)
 fmt.Println(h)
 }
+
+
+
+
+/*
+initial
+initial2
+12 15
+0
+false
+true
+short
+2
+*/
