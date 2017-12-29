@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbadb134-77f0-4e3d-91ac-63cdc45f8555" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/ArraySlices.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Arrays.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/BasicConstantManipulation.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/BasicValueManipulation.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/BasicVariableManipulation.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/FibonacciClosure.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ForLoop.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Functions.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/HELLO.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/IfElse.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Maps.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Range.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Switch.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/TypesOfFunctions.go" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,42 +26,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Functions.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Functions.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-              <folding>
-                <element signature="e#14#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TypesOfFunctions.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TypesOfFunctions.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="50" column="1" lean-forward="false" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
-              <folding>
-                <element signature="e#14#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FibonacciClosure.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FibonacciClosure.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -71,6 +50,9 @@
         <option value="$PROJECT_DIR$/Range.go" />
         <option value="$PROJECT_DIR$/Functions.go" />
         <option value="$PROJECT_DIR$/TypesOfFunctions.go" />
+        <option value="$PROJECT_DIR$/Pointers.go" />
+        <option value="$PROJECT_DIR$/Structure.go" />
+        <option value="$PROJECT_DIR$/Tasks/BloomsFilter.go" />
       </list>
     </option>
   </component>
@@ -131,6 +113,11 @@
               <item name="Learning-GOlang" type="b2602c69:ProjectViewProjectNode" />
               <item name="Learning-GOlang" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Learning-GOlang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Learning-GOlang" type="462c0819:PsiDirectoryNode" />
+              <item name="Codes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -164,15 +151,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build TypesOfFunctions.go">
-    <configuration name="go build ArraySlices.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
-      <module name="Learning-GOlang" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/ArraySlices.go" />
-      <directory value="$PROJECT_DIR$/" />
-    </configuration>
+  <component name="RunManager" selected="Go Build.go build Structure.go">
     <configuration name="go build Functions.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="Learning-GOlang" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -181,12 +160,12 @@
       <filePath value="$PROJECT_DIR$/Functions.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
-    <configuration name="go build Maps.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+    <configuration name="go build Pointers.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="Learning-GOlang" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/Maps.go" />
+      <filePath value="$PROJECT_DIR$/Pointers.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <configuration name="go build Range.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
@@ -195,6 +174,14 @@
       <go_parameters value="-i" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/Range.go" />
+      <directory value="$PROJECT_DIR$/" />
+    </configuration>
+    <configuration name="go build Structure.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="Learning-GOlang" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/Structure.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <configuration name="go build TypesOfFunctions.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
@@ -206,19 +193,19 @@
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Go Build.go build ArraySlices.go" />
-      <item index="1" class="java.lang.String" itemvalue="Go Build.go build Maps.go" />
-      <item index="2" class="java.lang.String" itemvalue="Go Build.go build Range.go" />
-      <item index="3" class="java.lang.String" itemvalue="Go Build.go build Functions.go" />
-      <item index="4" class="java.lang.String" itemvalue="Go Build.go build TypesOfFunctions.go" />
+      <item index="0" class="java.lang.String" itemvalue="Go Build.go build Range.go" />
+      <item index="1" class="java.lang.String" itemvalue="Go Build.go build Functions.go" />
+      <item index="2" class="java.lang.String" itemvalue="Go Build.go build TypesOfFunctions.go" />
+      <item index="3" class="java.lang.String" itemvalue="Go Build.go build Pointers.go" />
+      <item index="4" class="java.lang.String" itemvalue="Go Build.go build Structure.go" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Go Build.go build TypesOfFunctions.go" />
-        <item index="1" class="java.lang.String" itemvalue="Go Build.go build Functions.go" />
-        <item index="2" class="java.lang.String" itemvalue="Go Build.go build Range.go" />
-        <item index="3" class="java.lang.String" itemvalue="Go Build.go build Maps.go" />
-        <item index="4" class="java.lang.String" itemvalue="Go Build.go build ArraySlices.go" />
+        <item index="0" class="java.lang.String" itemvalue="Go Build.go build Structure.go" />
+        <item index="1" class="java.lang.String" itemvalue="Go Build.go build Pointers.go" />
+        <item index="2" class="java.lang.String" itemvalue="Go Build.go build TypesOfFunctions.go" />
+        <item index="3" class="java.lang.String" itemvalue="Go Build.go build Functions.go" />
+        <item index="4" class="java.lang.String" itemvalue="Go Build.go build Range.go" />
       </list>
     </recent_temporary>
   </component>
@@ -227,9 +214,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1602" height="875" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.125625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.125625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -284,9 +270,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#13#25#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -294,9 +278,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding>
-            <element signature="e#13#25#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -304,9 +286,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#13#25#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -314,9 +294,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="24" />
-          <folding>
-            <element signature="e#13#25#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -360,9 +338,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#13#25#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -370,9 +346,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-          <folding>
-            <element signature="e#13#25#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -384,13 +358,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Functions.go">
+    <entry file="file://$PROJECT_DIR$/TypesOfFunctions.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-          <folding>
-            <element signature="e#14#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="319">
+          <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -402,12 +374,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TypesOfFunctions.go">
+    <entry file="file://$PROJECT_DIR$/Functions.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="50" column="1" lean-forward="false" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+        <state relative-caret-position="259">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pointers.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Structure.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="83" lean-forward="true" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tasks/BloomsFilter.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding>
-            <element signature="e#14#26#0" expanded="true" />
+            <element signature="e#14#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
