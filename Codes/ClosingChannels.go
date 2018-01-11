@@ -25,9 +25,22 @@ func main() {
 		jobs <- j
 		fmt.Println("sent job", j)
 	}
-	close(jobs)
+	close(jobs)						//This sends False as the 'more' argument to the jobs channel if there are no more messages to be sent over the jobs channel.
 	fmt.Println("sent all jobs")
 
 
 	<-done  		//WAIT FOR THE CHANNEL USING SYNC MECHANISM.
 }
+
+
+
+/*
+sent job 1
+sent job 2
+sent job 3
+sent all jobs
+received job 1
+received job 2
+received job 3
+received all jobs
+ */
