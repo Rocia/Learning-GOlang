@@ -19,13 +19,15 @@ func main(){
 		fmt.Println("Timer 2 expired")
 	}()
 
-
 	stop2 := timer2.Stop()
 
 	if stop2 {
 		fmt.Println("Timer 2 stopped")
 	}
-
 }
 
+/*
+Timer 1 expired
+Timer 2 stopped
+ */
 
