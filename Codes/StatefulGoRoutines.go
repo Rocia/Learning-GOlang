@@ -1,5 +1,6 @@
 package main
-// 
+//One go routine owns the state in this method to ensure that the data is never corrupted by concurrent access.
+//To acquire and release access to the state a message is sent and received respectively by the owning go routine containing the request and a way of owning the routine
 import (
     "fmt"
     "math/rand"
@@ -7,14 +8,6 @@ import (
     "time"
 )
 
-// In this example our state will be owned by a single
-// goroutine. This will guarantee that the data is never
-// corrupted with concurrent access. In order to read or
-// write that state, other goroutines will send messages
-// to the owning goroutine and receive corresponding
-// replies. These `readOp` and `writeOp` `struct`s
-// encapsulate those requests and a way for the owning
-// goroutine to respond.
 type readOp struct {
     key  int
     resp chan int
@@ -27,34 +20,24 @@ type writeOp struct {
 
 func main() {
 
-    // As before we'll count how many operations we perform.
-    var readOps uint64 = 0
+    var readOps uint64 = 0				//count read and write Ops
     var writeOps uint64 = 0
 
-    // The `reads` and `writes` channels will be used by
-    // other goroutines to issue read and write requests,
-    // respectively.
-    reads := make(chan *readOp)
+    reads := make(chan *readOp)			//These read and write channels are used to access the hold the read and write structs as declared above
     writes := make(chan *writeOp)
 
-    // Here is the goroutine that owns the `state`, which
-    // is a map as in the previous example but now private
-    // to the stateful goroutine. This goroutine repeatedly
-    // selects on the `reads` and `writes` channels,
-    // responding to requests as they arrive. A response
-    // is executed by first performing the requested
-    // operation and then sending a value on the response
-    // channel `resp` to indicate success (and the desired
-    // value in the case of `reads`).
     go func() {
-        var state = make(map[int]int)
+        var state = make(map[int]int)			//Go routine that owns the state which is a map of the state that selects on the readOps and writeOps counter
         for {
             select {
-            case read := <-reads:
-                read.resp <- state[read.key]
-            case write := <-writes:
-                state[write.key] = write.val
-                write.resp <- true
+            case read := <-reads:				//Case where there is a message in the read channel
+            	fmt.Println("Read Operation")//Some Ops
+                read.resp <- state[read.key]	//sends a value indicating success and the desired value to be read
+
+            case write := <-writes:				//Write case where there is a message in the write channel
+            	fmt.Println("Write Operation")//Some Ops
+                state[write.key] = write.val	//Write Value to state
+                write.resp <- true				//Indicate action completed by sync
             }
         }
     }()
@@ -64,45 +47,55 @@ func main() {
     // Each read requires constructing a `readOp`, sending
     // it over the `reads` channel, and the receiving the
     // result over the provided `resp` channel.
-    for r := 0; r < 100; r++ {
+    for r := 0; r < 5; r++ {				//starts 50 GoRoutines that request reads to the state owning GoRoutine
         go func() {
             for {
-                read := &readOp{
-                    key:  rand.Intn(5),
-                    resp: make(chan int)}
-                reads <- read
-                <-read.resp
-                atomic.AddUint64(&readOps, 1)
-                time.Sleep(time.Millisecond)
+                read := &readOp{			//Create a ReadOp of the specified structure
+                    key:  rand.Intn(5),	//set the key as specified
+                    resp: make(chan int)}	//Create response channel as requested
+                reads <- read				//Send this ReadOp structure over the reads channel
+                <-read.resp					//Wait for Read Response
+                atomic.AddUint64(&readOps, 1)	//Increment the ReadOps atomic Counter
+                time.Sleep(time.Millisecond)//Sleep for 1ms before exiting
             }
         }()
     }
 
-    // We start 10 writes as well, using a similar
-    // approach.
-    for w := 0; w < 10; w++ {
+    for w := 0; w < 2; w++ {				//Start 10 go routines requesting writes
         go func() {
             for {
-                write := &writeOp{
-                    key:  rand.Intn(5),
-                    val:  rand.Intn(100),
-                    resp: make(chan bool)}
-                writes <- write
-                <-write.resp
-                atomic.AddUint64(&writeOps, 1)
-                time.Sleep(time.Millisecond)
+                write := &writeOp{			//Create Write structure as declared above
+                    key:  rand.Intn(5),	//Set key
+                    val:  rand.Intn(100),//Set Value
+                    resp: make(chan bool)}	//Create boolean response channel
+                writes <- write				//send writeOps structure over the write channel
+                <-write.resp				//Wait for write response
+                atomic.AddUint64(&writeOps, 1)//Increment the write counter
+                time.Sleep(time.Millisecond)//Sleep for 1ms before exiting
             }
         }()
     }
 
     // Let the goroutines work for a second.
-    time.Sleep(time.Second)
+    time.Sleep(time.Millisecond*1)					//Let all the goroutines work for 1 second
 
     // Finally, capture and report the op counts.
-    readOpsFinal := atomic.LoadUint64(&readOps)
+    readOpsFinal := atomic.LoadUint64(&readOps)	//Then capture and report the readOps counter and WriteOps data structure values
     fmt.Println("readOps:", readOpsFinal)
     writeOpsFinal := atomic.LoadUint64(&writeOps)
     fmt.Println("writeOps:", writeOpsFinal)
 }
 
 
+/*
+Read Operation
+Read Operation
+Write Operation
+Read Operation
+Read Operation
+Read Operation
+Write Operation
+Read Operation
+readOps: 6
+writeOps: 2
+ */
