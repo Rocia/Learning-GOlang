@@ -23,8 +23,8 @@ func main() {
 	print("ToUpper:   ", strings.ToUpper("test"))
 	print("______________________________________________________")
 
-	print("Length of 'test': ", len("hello"))
-	print("Character:", "hello"[1])
+	print("Length of 'test': ", len("test"))
+	print("Character:", "test"[2])
 }
 
 /*
@@ -41,6 +41,6 @@ Split:      [a b c d e]
 ToLower:    test
 ToUpper:    TEST
 ______________________________________________________
-Length of 'test':  5
-Character: 101
+Length of 'test':  4
+Character: 115
  */
