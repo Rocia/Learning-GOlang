@@ -1,21 +1,3 @@
-// We often need our programs to perform operations on
-// collections of data, like selecting all items that
-// satisfy a given predicate or mapping all items to a new
-// collection with a custom function.
-
-// In some languages it's idiomatic to use [generic](http://en.wikipedia.org/wiki/Generic_programming)
-// data structures and algorithms. Go does not support
-// generics; in Go it's common to provide collection
-// functions if and when they are specifically needed for
-// your program and data types.
-
-// Here are some example collection functions for slices
-// of `strings`. You can use these examples to build your
-// own functions. Note that in some cases it may be
-// clearest to just inline the collection-manipulating
-// code directly, instead of creating and calling a
-// helper function.
-
 package main
 
 import "strings"
@@ -25,6 +7,7 @@ import "fmt"
 // -1 if no match is found.
 func Index(vs []string, t string) int {
 	for i, v := range vs {
+		fmt.Println(i, v)
 		if v == t {
 			return i
 		}
@@ -32,15 +15,13 @@ func Index(vs []string, t string) int {
 	return -1
 }
 
-// Returns `true` if the target string t is in the
-// slice.
-func Include(vs []string, t string) bool {
+
+func Include(vs []string, t string) bool {				//Returns true or false based on wjhether the target stringis a part of the main string
 	return Index(vs, t) >= 0
 }
 
-// Returns `true` if one of the strings in the slice
-// satisfies the predicate `f`.
-func Any(vs []string, f func(string) bool) bool {
+
+func Any(vs []string, f func(string) bool) bool {		//Returns true if any one of the target string returns satisfies the condition dictated by the function
 	for _, v := range vs {
 		if f(v) {
 			return true
@@ -49,9 +30,8 @@ func Any(vs []string, f func(string) bool) bool {
 	return false
 }
 
-// Returns `true` if all of the strings in the slice
-// satisfy the predicate `f`.
-func All(vs []string, f func(string) bool) bool {
+
+func All(vs []string, f func(string) bool) bool {		//Returns true if all of the target string returns satisfies the condition dictated by the function
 	for _, v := range vs {
 		if !f(v) {
 			return false
@@ -84,29 +64,38 @@ func Map(vs []string, f func(string) string) []string {
 
 func main() {
 
-	// Here we try out our various collection functions.
-	var strs = []string{"peach", "apple", "pear", "plum"}
+	var strs = []string{"ravioli", "spaghetti", "carbonara", "farfalle"}
 
-	fmt.Println(Index(strs, "pear"))
+	fmt.Println(Index(strs, "carbonara"))
 
-	fmt.Println(Include(strs, "grape"))
+	fmt.Println(Include(strs, "spaghetti"))
 
 	fmt.Println(Any(strs, func(v string) bool {
-		return strings.HasPrefix(v, "p")
+		return strings.HasPrefix(v, "r")
 	}))
 
 	fmt.Println(All(strs, func(v string) bool {
-		return strings.HasPrefix(v, "p")
+		return strings.HasPrefix(v, "a")
 	}))
 
 	fmt.Println(Filter(strs, func(v string) bool {
 		return strings.Contains(v, "e")
 	}))
 
-	// The above examples all used anonymous functions,
-	// but you can also use named functions of the correct
-	// type.
-	fmt.Println(Map(strs, strings.ToUpper))
+	fmt.Println(Map(strs, strings.ToUpper))				//Using named instead of anonymous functions
 
 }
 
+/*
+0 ravioli
+1 spaghetti
+2 carbonara
+2
+0 ravioli
+1 spaghetti
+true
+true
+false
+[spaghetti farfalle]
+[RAVIOLI SPAGHETTI CARBONARA FARFALLE]
+ */
