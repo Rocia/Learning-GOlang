@@ -40,9 +40,8 @@ func All(vs []string, f func(string) bool) bool {		//Returns true if all of the 
 	return true
 }
 
-// Returns a new slice containing all strings in the
-// slice that satisfy the predicate `f`.
-func Filter(vs []string, f func(string) bool) []string {
+
+func Filter(vs []string, f func(string) bool) []string {	//Returns all strings that satisfy the predicate
 	vsf := make([]string, 0)
 	for _, v := range vs {
 		if f(v) {
@@ -52,9 +51,8 @@ func Filter(vs []string, f func(string) bool) []string {
 	return vsf
 }
 
-// Returns a new slice containing the results of applying
-// the function `f` to each string in the original slice.
-func Map(vs []string, f func(string) string) []string {
+
+func Map(vs []string, f func(string) string) []string {			//returns map of result after applying function to all entities
 	vsm := make([]string, len(vs))
 	for i, v := range vs {
 		vsm[i] = f(v)
