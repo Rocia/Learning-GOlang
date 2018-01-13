@@ -66,23 +66,23 @@ func main() {
 
 	var strs = []string{"ravioli", "spaghetti", "carbonara", "farfalle"}
 
-	fmt.Println(Index(strs, "carbonara"))
+	fmt.Println("Index function for the word 'carbonara'", Index(strs, "carbonara"))
 
-	fmt.Println(Include(strs, "spaghetti"))
+	fmt.Println("Include function for the word 'spaghetti'", Include(strs, "spaghetti"))
 
-	fmt.Println(Any(strs, func(v string) bool {
+	fmt.Println("Any for the letter 'r'",Any(strs, func(v string) bool {
 		return strings.HasPrefix(v, "r")
 	}))
 
-	fmt.Println(All(strs, func(v string) bool {
+	fmt.Println("All for the letter 'a'",All(strs, func(v string) bool {
 		return strings.HasPrefix(v, "a")
 	}))
 
-	fmt.Println(Filter(strs, func(v string) bool {
+	fmt.Println("Filter strings",Filter(strs, func(v string) bool {
 		return strings.Contains(v, "e")
 	}))
 
-	fmt.Println(Map(strs, strings.ToUpper))				//Using named instead of anonymous functions
+	fmt.Println("convert to upper",Map(strs, strings.ToUpper))				//Using named instead of anonymous functions
 
 }
 
@@ -90,12 +90,13 @@ func main() {
 0 ravioli
 1 spaghetti
 2 carbonara
-2
+Index function for the word 'carbonara' 2
 0 ravioli
 1 spaghetti
-true
-true
-false
-[spaghetti farfalle]
-[RAVIOLI SPAGHETTI CARBONARA FARFALLE]
+Include function for the word 'spaghetti' true
+Any for the letter 'r' true
+All for the letter 'a' false
+Filter strings [spaghetti farfalle]
+convert to upper [RAVIOLI SPAGHETTI CARBONARA FARFALLE]
+
  */
