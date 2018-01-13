@@ -12,10 +12,7 @@ type point struct {
 
 func main() {
 
-	// Go offers several printing "verbs" designed to
-	// format general Go values. For example, this prints
-	// an instance of our `point` struct.
-	p := point{1, 2}
+	p := point{1, 2}						//verb printer
 	fmt.Printf("%v\n", p)
 
 	// If the value is a struct, the `%+v` variant will
@@ -105,3 +102,30 @@ func main() {
 	// `os.Stdout` using `Fprintf`.
 	fmt.Fprintf(os.Stderr, "an %s\n", "error")
 }
+
+
+/*
+{1 2}
+an error
+{x:1 y:2}
+main.point{x:1, y:2}
+main.point
+true
+123
+1110
+!
+1c8
+78.900000
+1.234000e+08
+1.234000E+08
+"string"
+"\"string\""
+6865782074686973
+0xc82000a2b0
+|    12|   345|
+|  1.20|  3.45|
+|1.20  |3.45  |
+|   foo|     b|
+|foo   |b     |
+a string
+ */
