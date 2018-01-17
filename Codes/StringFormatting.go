@@ -87,7 +87,7 @@ func main() {
 	// You may also want to control width when formatting
 	// strings, especially to ensure that they align in
 	// table-like output. For basic right-justified width.
-	fmt.Printf("|%6s|%6s|\n", "foo", "b")
+	fmt.Printf("|%6s|%6s|\n", "foo", "b")				//
 
 	// To left-justify use the `-` flag as with numbers.
 	fmt.Printf("|%-6s|%-6s|\n", "foo", "b")
