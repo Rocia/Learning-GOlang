@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbadb134-77f0-4e3d-91ac-63cdc45f8555" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="bbadb134-77f0-4e3d-91ac-63cdc45f8555" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +14,8 @@
       <file leaf-file-name="StringFormatting.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Codes/StringFormatting.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="95" column="57" lean-forward="true" selection-start-line="95" selection-start-column="57" selection-end-line="95" selection-end-column="57" />
+            <state relative-caret-position="-1361">
+              <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
               <folding>
                 <element signature="e#14#36#0" expanded="true" />
               </folding>
@@ -25,12 +23,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Codes/test.go">
+      <file leaf-file-name="Time.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Codes/Time.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="118" column="43" lean-forward="false" selection-start-line="118" selection-start-column="43" selection-end-line="118" selection-end-column="43" />
-              <folding />
+            <state relative-caret-position="199">
+              <caret line="53" column="2" lean-forward="true" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
+              <folding>
+                <element signature="e#14#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,6 +119,7 @@
         <option value="$PROJECT_DIR$/Codes/test,go.go" />
         <option value="$PROJECT_DIR$/Codes/test.go" />
         <option value="$PROJECT_DIR$/Codes/Json.go" />
+        <option value="$PROJECT_DIR$/Codes/Time.go" />
       </list>
     </option>
   </component>
@@ -228,7 +229,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build Json.go">
+  <component name="RunManager" selected="Go Build.go build Time.go">
     <configuration name="go build Json.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="Learning-GOlang" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -253,12 +254,12 @@
       <filePath value="$PROJECT_DIR$/Codes/StringFormatting.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
-    <configuration name="go build stringFunctions.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+    <configuration name="go build Time.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="Learning-GOlang" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/Codes/stringFunctions.go" />
+      <filePath value="$PROJECT_DIR$/Codes/Time.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <configuration name="go build test.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
@@ -270,19 +271,19 @@
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Go Build.go build stringFunctions.go" />
-      <item index="1" class="java.lang.String" itemvalue="Go Build.go build Regex.go" />
-      <item index="2" class="java.lang.String" itemvalue="Go Build.go build StringFormatting.go" />
-      <item index="3" class="java.lang.String" itemvalue="Go Build.go build Json.go" />
-      <item index="4" class="java.lang.String" itemvalue="Go Build.go build test.go" />
+      <item index="0" class="java.lang.String" itemvalue="Go Build.go build Regex.go" />
+      <item index="1" class="java.lang.String" itemvalue="Go Build.go build StringFormatting.go" />
+      <item index="2" class="java.lang.String" itemvalue="Go Build.go build Json.go" />
+      <item index="3" class="java.lang.String" itemvalue="Go Build.go build test.go" />
+      <item index="4" class="java.lang.String" itemvalue="Go Build.go build Time.go" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Go Build.go build Json.go" />
-        <item index="1" class="java.lang.String" itemvalue="Go Build.go build test.go" />
-        <item index="2" class="java.lang.String" itemvalue="Go Build.go build StringFormatting.go" />
-        <item index="3" class="java.lang.String" itemvalue="Go Build.go build Regex.go" />
-        <item index="4" class="java.lang.String" itemvalue="Go Build.go build stringFunctions.go" />
+        <item index="0" class="java.lang.String" itemvalue="Go Build.go build Time.go" />
+        <item index="1" class="java.lang.String" itemvalue="Go Build.go build Json.go" />
+        <item index="2" class="java.lang.String" itemvalue="Go Build.go build test.go" />
+        <item index="3" class="java.lang.String" itemvalue="Go Build.go build StringFormatting.go" />
+        <item index="4" class="java.lang.String" itemvalue="Go Build.go build Regex.go" />
       </list>
     </recent_temporary>
   </component>
@@ -326,7 +327,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Arrays.go" />
     <entry file="file:///usr/lib/go-1.6/src/runtime/mapspeed_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -614,16 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Codes/StringFormatting.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="95" column="57" lean-forward="true" selection-start-line="95" selection-start-column="57" selection-end-line="95" selection-end-column="57" />
-          <folding>
-            <element signature="e#14#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Codes/Json.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -639,6 +629,26 @@
         <state relative-caret-position="274">
           <caret line="118" column="43" lean-forward="false" selection-start-line="118" selection-start-column="43" selection-end-line="118" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Codes/StringFormatting.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1361">
+          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <element signature="e#14#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Codes/Time.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="53" column="2" lean-forward="true" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
+          <folding>
+            <element signature="e#14#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
