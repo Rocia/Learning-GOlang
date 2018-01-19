@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"os"
 )
 
 // We'll use these two structs to demonstrate encoding and
@@ -69,6 +70,15 @@ func main() {
 	str1 := strs[0].(string)
 	fmt.Println(str1)
 
+	str := `{"page": 1, "Dishes": ["ravioli","carbonara"]}`			//Decode Json into custom data types
+	res := Response2{}
+	json.Unmarshal([]byte(str), &res)
+	fmt.Println(res)
+	fmt.Println(res.Dishes[0])
+
+	enc := json.NewEncoder(os.Stdout)								//Streaming JSON to os.writers std.out
+	d := map[string]int{"ravioli": 7, "spaghetti": 9}
+	enc.Encode(d)
 }
 
 
@@ -84,5 +94,7 @@ true
 map[Numeric:6.13 Alphabetical:[a b]]
 6.13
 a
-
+{1 [ravioli carbonara]}
+ravioli
+{"ravioli":7,"spaghetti":9}
  */
